@@ -38,56 +38,79 @@ ServerEvents.recipes(event => {
 
     // Insulating Glass Recipe
     event.custom(
-        {
-            "type": "ad_astra:alloying",
-            "cookingtime": 100,
-            "energy": 20,
-            "ingredients": [
-              {
-                "item": "minecraft:sand"
-              },
-              {
-                "tag": "#forge:stone"
-              },
-              {
-                "item": "minecraft:clay_ball"
-              },
-              {
-                "item": "kubejs:dolomite"
-              }
-            ],
-            "result": {
-              "count": 3,
-              "id": "immersiveengineering:insulating_glass"
+      {
+          "type": "ad_astra:alloying",
+          "cookingtime": 100,
+          "energy": 20,
+          "ingredients": [
+            {
+              "item": "minecraft:sand"
+            },
+            {
+              "item": "minecraft:stone"
+            },
+            {
+              "item": "minecraft:clay_ball"
+            },
+            {
+              "item": "kubejs:dolomite"
             }
+          ],
+          "result": {
+            "count": 3,
+            "id": "immersiveengineering:insulating_glass"
           }
-        
+        }
+      
 
 
-    )
+  )
 
-    // Basic Control Circuit Recipe
-    event.custom({
-      "type": "immersiveengineering:blueprint",
-      "category": "components",
-      "inputs": [
+
+// Infused Alloy Recipe   
+  event.custom(
+    {
+      "type": "ad_astra:alloying",
+      "cookingtime": 150,
+      "energy": 50,
+      "ingredients": [
         {
-          "tag": "immersiveengineering:insulating_glass"
-        },
-        {
-          "tag": "mekanism:ingot_osmium"
+          "tag": "ad_astra:desh_ingots"
         },
         {
           "tag": "forge:dusts/redstone"
         }
       ],
       "result": {
-        "Count": 1,
-        "id": "mekanism:basic_control_circuit"
+        "count": 1,
+        "id": "mekanism:alloy_infused"
       }
-    })
-  
-        
+    }
+
+
+)
+
+// Reinforced Alloy Recipe
+event.custom(
+  {
+    "type": "ad_astra:alloying",
+    "cookingtime": 250,
+    "energy": 100,
+    "ingredients": [
+      {
+        "tag": "ad_astra:ostrum_ingots"
+      },
+      {
+        "item": 'ad_astra:ice_shard'
+      }
+    ],
+    "result": {
+      "count": 1,
+      "id": "mekanism:alloy_reinforced"
+    }
+  }
+)
 })
+
 console.info('Hello, World! (Loaded server scripts)')
 
