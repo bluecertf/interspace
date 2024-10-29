@@ -14,7 +14,8 @@ ServerEvents.recipes(event => {
   event.remove({not: {mod: `ad_astra`}, output: "immersiveengineering:insulating_glass"})
   event.remove({output: "ad_astra:etrionic_blast_furnace"})
   event.remove([{ type: 'minecraft:smelting', output: 'mekanism:ingot_osmium' }, { type: 'minecraft:blasting', output: 'mekanism:ingot_osmium' }])
-  event.remove([{ type: "ad_astra:alloying", output: "ad_astra:steel_ingot"}])
+  event.remove({ id: "ad_astra:alloying/steel_ingot_from_alloying_iron_ingot_and_coals" })
+    
 
   
   event.remove(
